@@ -21,5 +21,4 @@ const Data = {
   fEmail: "bengaubert@greenerealty.com",
   fTrade: "© Made by Michael",
 }
-
 module.exports = {App}

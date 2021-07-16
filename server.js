@@ -14,10 +14,12 @@ app.set('view engine', 'pug');
 const PORT = 8080;
 
 // 4 express middleware
-app.use(express.static('./public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 5 GET index view
 app.get('/', callback.App)
 
 // listen for requests from PORT
 app.listen(PORT, () => console.log(`${PORT}`));
+
+module.exports = app;
