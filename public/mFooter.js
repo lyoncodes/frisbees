@@ -1,4 +1,4 @@
-import { BuildTemplateNode } from './helpers/defineNode.js'
+import { TemplateNode } from './helpers/defineNode.js'
 const Data = {
   name: 'm-footer',
   id: 'm-footer',
@@ -13,4 +13,4 @@ const Data = {
     `,
   type: 'template'
 }
-BuildTemplateNode(Data)
+TemplateNode(Data)

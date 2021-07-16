@@ -37,6 +37,7 @@
 .tan-bg{
   background-color: #f5f0e75b;
 }
+
 /* Text */
 .font-lg{
   font-size: 32px;
@@ -47,18 +48,17 @@
 .title{
   text-transform: uppercase;
 }
-.lg-link{
-  transition: all 0.6s;
-}
-.lg-link:hover{
-  cursor: pointer;
-  font-weight: 500;
-}
 
 /* Nav Bar */
 .nav-row {
   float: right;
 }
+
+/* Carousel */
+.carousel > img {
+  height: 300px;
+}
+
 /* Buttons */
 button {
   background: #004f11;
