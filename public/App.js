@@ -59,25 +59,36 @@ const Data = {
   },
   frisbees: [
     {
-      type: "mBlock",
       title: "Discover Beautiful Olympia",
       content_text: "Distinct natural beauty and a vibrant community make Olympia an amazing place to call home. No matter what your path or where you're from, I can help achieve your real estate goals with confidence and peace of mind. I'm proud to offer Thurston County brokerage services rooted in trust and transparency, putting my clients first from start to finish.",
-      u_lists: [],
-      btn_text: "Contact Me",
+      btn: {
+        btn_text: "Contact Me",
+        btn_href: "https://www.greenerealty.com/agents/46583-ben-gaubert"
+      },
+      i_row: [
+        {
+          logo_src: './assets/graphics/fb-greene.svg',
+          href: 'https://www.facebook.com/GreeneRealty/'
+        },
+        {
+          logo_src: './assets/graphics/fb-greene.svg',
+          href: 'https://www.facebook.com/GreeneRealty/'
+        },
+        {
+          logo_src: './assets/graphics/fb-greene.svg',
+          href: 'https://www.facebook.com/GreeneRealty/'
+        }
+      ],
       carousel_slug: true
     },
     {
-      type: "mBlock",
       title: "I'm proud to call Olympia home.",
       content_text: "Our community provides endless joy, with access to some of the world's best outdoor activities. When I'm not assisting clients, you'll find me spending time with my wife and dog, fly fishing our abundant local waters, or cooking food for friends.",
-      u_lists: [],
-      btn_text: "",
       img_slug: "bg-portrait.jpg"
     },
     {
-      type: "mList",
       title: "Quality Services",
-      desc_text: "",
+      content_text: "",
       u_lists: [
         {
           l_title: "For Buyers",

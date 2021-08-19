@@ -26,30 +26,40 @@
 .col-12 {width: 100%;}
 
 /* Modifiers */
-
+.m-center{
+  justify-content: center;
+}
+.m-stack{
+  flex-direction: column;
+}
+.m-neat{
+  justify-content: space-evenly;
+}
+.m-container {
+  display: flex;
+}
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
-.tan-bg{
-  background-color: #f5f0e75b;
-}
 
 /* Text */
-.font-lg{
-  font-size: 32px;
-}
-#title, button {
+button, #title {
   font-weight: 800;
 }
 #title{
   text-transform: uppercase;
 }
-
 /* Nav Bar */
 .nav-row {
   float: right;
+}
+/* Links */
+.i-link img{
+  height: 50px;
+  width: 50px;
+  padding: 0 1em;
 }
 
 /* Carousel */
@@ -63,8 +73,10 @@ button {
   border: 1px solid #003b0d;
   border-radius: 45px;
   box-shadow: 0 1.1875rem 1.75rem 0.3125rem rgb(64 64 64 / 9%);
-  color: #fff;
   line-height: 45px;
   padding: 0.25rem;
   width: 50%;
+}
+button a {
+  color: #fff;
 }

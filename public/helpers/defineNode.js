@@ -2,24 +2,18 @@
 // defineNodes.js
 import { Carousel } from '../List.js'
 // =============================================
-function newNode (type, DOMId, el, idx) {
-  // create node
-  let node = document.createElement(type)
-  // check if newly created node is an IMG or Plain Obj
-  let nodeData = node.nodeName === 'IMG' ? document.createAttribute('src') : document.createTextNode(el.text)
-  // If it's an image, assign the path stored in el argument
-  node.nodeName === 'IMG' ? nodeData.value = el : null
-  // conditionally check the node data in order to perform the right appendage
-  nodeData.value ? node.setAttributeNode(nodeData) : node.appendChild(nodeData)
-  // assign node a unique id & return it
-  nodeId(node, DOMId, idx)
-  return { node }
-}
-
 function nodeId (node, DOMId, idx) {
   let id = document.createAttribute('id')
   id.value = `${DOMId}${idx + 1}`
   node.setAttributeNode(id)
+}
+
+function newNode (type, DOMId, el, idx) {
+  let node = document.createElement(type)
+  let nodeData = document.createTextNode(el.text)
+  nodeData ? node.appendChild(nodeData) : null
+  nodeId(node, DOMId, idx)
+  return { node }
 }
 
 function newTemplate (type, html) {
@@ -33,23 +27,10 @@ function createShadow (self, modeType) {
   return shadow
 }
 
-// export function ImgNode (data) {
-//   class NewNode extends HTMLElement {
-//     constructor () {
-//       self = super()
-//       let shadow = createShadow(self, 'open')
-
-//       let element = newNode(data.type, data.id, data.text, 0)
-//       shadow.appendChild(element.node)
-//     }
-//   }
-//   customElements.define(`${data.name}`, NewNode)
-// }
-
 export function TemplateNode (obj) {
   const template = newTemplate(obj.type, obj.html)
   
-  class NewTemp extends HTMLElement {
+  class BlockComponent extends HTMLElement {
     constructor() {
       super();
       this.attachShadow({ mode: 'open'})
@@ -58,7 +39,14 @@ export function TemplateNode (obj) {
     }
   }
 
-  customElements.define(`${obj.name}`, NewTemp)
+  customElements.define(`${obj.name}`, BlockComponent)
+}
+
+export function defineAttribute (obj) {
+  let node = document.createElement(obj.type)
+  let nodeData = document.createAttribute('src')
+  nodeData.value = obj.src
+  node.setAttributeNode(nodeData)
 }
 
 export function BuildCarousel(obj) {
