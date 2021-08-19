@@ -4,10 +4,11 @@ html
   body
     include nav
     
-    .col-3
-      img(src='./assets/graphics/header-logo.svg')
-    
-    include appLoop
+    .col-12.m-container.m-center
+      .col-3
+        img(src='./assets/graphics/header-logo.svg')
+    .col-12.m-container.m-stack  
+      include appLoop
     
     include footer
     
