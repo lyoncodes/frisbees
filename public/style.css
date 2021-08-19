@@ -26,9 +26,7 @@
 .col-12 {width: 100%;}
 
 /* Modifiers */
-.bump {
-  margin-top: 48px;
-}
+
 .sticky {
   position: fixed;
   top: 0;
@@ -42,10 +40,10 @@
 .font-lg{
   font-size: 32px;
 }
-.title, button {
+#title, button {
   font-weight: 800;
 }
-.title{
+#title{
   text-transform: uppercase;
 }
 

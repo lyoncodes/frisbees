@@ -1,12 +1,9 @@
 import { TemplateNode } from './helpers/defineNode.js'
 const Data = {
-  name: 'm-text',
-  id: 'm-text',
+  name: 'm-li',
+  id: 'm-li',
   html: `
-    <div>
-      <span id='title'></span>
-      <div><slot /></div>
-    </div>
+    <span><slot /></span>
     <link rel="stylesheet" href="./style.css">
     `,
   type: 'template'

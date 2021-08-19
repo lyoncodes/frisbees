@@ -33,18 +33,18 @@ function createShadow (self, modeType) {
   return shadow
 }
 
-export function ImgNode (data) {
-  class NewNode extends HTMLElement {
-    constructor () {
-      self = super()
-      let shadow = createShadow(self, 'open')
+// export function ImgNode (data) {
+//   class NewNode extends HTMLElement {
+//     constructor () {
+//       self = super()
+//       let shadow = createShadow(self, 'open')
 
-      let element = newNode(data.type, data.id, data.text, 0)
-      shadow.appendChild(element.node)
-    }
-  }
-  customElements.define(`${data.name}`, NewNode)
-}
+//       let element = newNode(data.type, data.id, data.text, 0)
+//       shadow.appendChild(element.node)
+//     }
+//   }
+//   customElements.define(`${data.name}`, NewNode)
+// }
 
 export function TemplateNode (obj) {
   const template = newTemplate(obj.type, obj.html)
@@ -64,6 +64,7 @@ export function TemplateNode (obj) {
 export function BuildCarousel(obj) {
   const template = newTemplate(obj.type, obj.html)
   const carousel = new Carousel()
+
   class CarouselComponent extends HTMLElement {
     constructor() {
       super();
@@ -78,7 +79,7 @@ export function BuildCarousel(obj) {
       this.shadowRoot.querySelector('.prev').addEventListener('click', () => carousel.prev());
       this.shadowRoot.querySelector('.next').addEventListener('click', () => carousel.next());
 
-      
+      setInterval(() => { carousel.next(); }, 6000)
     }
   }
 
