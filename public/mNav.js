@@ -1,6 +1,6 @@
 import { BuildList } from './helpers/defineNode.js'
 const Data = {
-  name: 'nav-bar',
+  name: 'm-nav',
   id: 'test',
   type: 'ul',
   dataStore: [

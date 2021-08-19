@@ -1,0 +1,13 @@
+each item in Data.frisbees
+  if item.type="mBlock"
+    m-block
+      #title(slot='title') #{item.title}
+      .text-block(slot='textBlock') #{item.content_text}
+    if item.carousel_slug 
+      include carousel
+    if item.img_slug
+      img(src=`./assets/imgs/${item.img_slug}`)
+    if item.btn_text
+      m-button #{item.btn_text}
+  if item.type="mList"
+    include mList
