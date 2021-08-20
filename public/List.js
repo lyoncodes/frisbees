@@ -19,6 +19,11 @@ export class Carousel {
   }
   decrement() {
     this.pos --
+    this.hideNext()
+    this.show()
+  }
+  front(){
+    this.pos = 0
     this.hideLast()
     this.show()
   }
@@ -29,7 +34,7 @@ export class Carousel {
     return this.hasPrev() ? this.decrement() : null
   }
   next(){
-    return this.hasNext() ? this.increment() : null
+    return this.hasNext() ? this.increment() : this.front()
   }
   hasNext(){
     return (this.pos >= this.listSize - 1) ? false : true
@@ -40,7 +45,10 @@ export class Carousel {
   hidePrev(){
     this.dataStore[this.pos - 1].style.display = 'none'
   }
-  hideLast(){
+  hideNext(){
     this.dataStore[this.pos + 1].style.display = 'none'
+  }
+  hideLast(){
+    this.dataStore[this.dataStore.length - 1].style.display = 'none'
   }
 }

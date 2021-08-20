@@ -66,8 +66,12 @@ export function BuildCarousel(obj) {
 
       this.shadowRoot.querySelector('.prev').addEventListener('click', () => carousel.prev());
       this.shadowRoot.querySelector('.next').addEventListener('click', () => carousel.next());
+      this.shadowRoot.querySelector('.pause').addEventListener('click', () => {
+        clearInterval(timer)
+      });
 
-      setInterval(() => { carousel.next(); }, 6000)
+      let timer = setInterval(() => { carousel.next(); }, 3000)
+
     }
   }
 
