@@ -2,17 +2,25 @@
 // defineNodes.js
 import { Carousel } from '../List.js'
 // =============================================
-function nodeId (node, DOMId, idx) {
+function nodeSrc (node, src) {
+  let link = document.createAttribute('href')
+  link.value = src
+  node.setAttributeNode(link)
+}
+
+function nodeId (type, node, DOMId, idx, el) {
   let id = document.createAttribute('id')
   id.value = `${DOMId}${idx + 1}`
   node.setAttributeNode(id)
+
+  type = 'a' ? nodeSrc(node, el.href) : null
 }
 
 function newNode (type, DOMId, el, idx) {
   let node = document.createElement(type)
   let nodeData = document.createTextNode(el.text)
   nodeData ? node.appendChild(nodeData) : null
-  nodeId(node, DOMId, idx)
+  nodeId(type, node, DOMId, idx, el)
   return { node }
 }
 
@@ -85,8 +93,9 @@ export function BuildList (data) {
       let shadow = createShadow(self, 'open')
 
       data.dataStore.forEach((el, idx) => {
-        let element = newNode(data.type, data.id, el, idx)
-        shadow.appendChild(element.node)
+        let link = newNode(data.type, data.id, el, idx)
+        
+        shadow.appendChild(link.node)
       })
 
     }

@@ -1,4 +1,2 @@
-.col-12
-  .col-3
-  .col-9
-    m-nav.nav-row
+each link, index in Data.navigation
+  a.nav-link(href=`${link.href}`) #{link.text}
