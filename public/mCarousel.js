@@ -11,6 +11,7 @@ const Data = {
       <img src="./assets/imgs/sub-house.jpg" style="display: none">
     </div>
     <button class="next">next</button>
+    <button class="pause">pause</button>
     <link rel="stylesheet" href="./style.css">
   `,
   type: 'template'
