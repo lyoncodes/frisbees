@@ -11,7 +11,7 @@ const Data = {
     </div>
     <a href="https://validator.w3.org/nu/?doc=http://www.bengaubert.com/"><slot name="html_valid"></a>
     <a href="https://jigsaw.w3.org/css-validator/check?uri=referer"><slot name="CSS_valid"></a>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     `,
   type: 'template'
 }

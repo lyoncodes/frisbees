@@ -1,4 +1,4 @@
- function App(req, res){
+function App(req, res){
   res.render('index', { Data })
 }
 

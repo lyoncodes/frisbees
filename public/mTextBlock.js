@@ -6,7 +6,7 @@ const Data = {
     <div>
       <p id='content'><slot /></p>
     </div>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     `,
   type: 'template'
 }
