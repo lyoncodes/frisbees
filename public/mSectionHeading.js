@@ -7,7 +7,7 @@ const Data = {
       <h1><slot name="title" /></h1>
       <p><slot name="textBlock" /></p>
     </div>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     `,
   type: 'template'
 }

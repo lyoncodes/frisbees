@@ -9,7 +9,9 @@ const Data = {
       <div><slot name="email"/></div>
       <div><slot name="trademark"/></div>
     </div>
-    <link rel="stylesheet" href="./style.css">
+    <a href="https://validator.w3.org/nu/?doc=http://www.bengaubert.com/"><slot name="html_valid"></a>
+    <a href="https://jigsaw.w3.org/css-validator/check?uri=referer"><slot name="CSS_valid"></a>
+    <link rel="stylesheet" href="./styles/style.css">
     `,
   type: 'template'
 }

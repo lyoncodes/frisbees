@@ -63,7 +63,7 @@ button, #title {
 }
 
 /* Carousel */
-.carousel > img {
+.carousel > div > img {
   height: 300px;
 }
 

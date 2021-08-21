@@ -4,7 +4,7 @@ const Data = {
   id: 'm-li',
   html: `
     <span><slot /></span>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     `,
   type: 'template'
 }
