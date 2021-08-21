@@ -3,24 +3,6 @@ function App(req, res){
 }
 
 const Data = {
-  navigation: [
-    {
-      text: 'home',
-      href: '#home'
-    },
-    {
-      text: 'services',
-      href: '#services'
-    },
-    {
-      text: 'listings',
-      href: 'https://www.greenerealty.com/agents/46583-ben-gaubert'
-    },
-    {
-      text: 'Meet Ben',
-      href: '#ben'
-    }
-  ],
   footer: {
     fTel: "(360)485-3711",
     fEmail: "bengaubert@greenerealty.com",

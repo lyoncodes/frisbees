@@ -1,6 +1,6 @@
 // @lyoncodes, Meanxael, Lyon Creative LLC. 2021
 // defineNodes.js
-import { Carousel } from '../List.js' 
+import { Carousel } from '../List.js'
 // =============================================
 function defineNodeAttribute (node, attr, src) {
   let link = document.createAttribute(attr)
@@ -82,10 +82,37 @@ export function BuildCarousel(obj) {
       this.shadowRoot.querySelector('.next').addEventListener('click', () => carousel.next());
       this.shadowRoot.querySelector('.pause').addEventListener('click', () => clearInterval(cycle));
 
-      let cycle = setInterval(() => { carousel.next(); }, 1000)
+      // let cycle = setInterval(() => { carousel.next(); }, 1000)
 
     }
   }
 
   customElements.define(`${obj.name}`, CarouselComponent)
+}
+
+export function BuildNav(obj){
+  const template = newTemplate(obj.type, obj.html)
+  
+  class NavTemplate extends HTMLElement {
+    constructor() {
+      super();
+      
+      this.attachShadow({mode: 'open'})
+      this.shadowRoot.appendChild(template.content.cloneNode(true))
+
+      const DOMref = this.shadowRoot.querySelector('.navigation-menu')
+
+      let nlist = []
+
+      obj.navigation.forEach((el, idx) => {
+        nlist.push(newNode('a', 'nav-link', el, idx))
+      })
+      nlist.forEach((el, idx) => { 
+        el.node.innerText = obj.navigation[idx].text
+      })
+      nlist.forEach(el => DOMref.appendChild(el.node))
+    }
+  }
+
+  customElements.define(`${obj.name}`, NavTemplate)
 }
