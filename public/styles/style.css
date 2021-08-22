@@ -122,6 +122,7 @@ li {
 /* Carousel */
 .carousel > div > img {
   height: 300px;
+  max-width: 450px;
 }
 
 /* Buttons */
@@ -182,7 +183,7 @@ button {
   .col-sm-10 {width: 83.33%;}
   .col-sm-11 {width: 91.66%;}
   .col-sm-12 {width: 100%;}
-
+  
   .carousel > div > img {
     height: 225px;
     width: 100%;

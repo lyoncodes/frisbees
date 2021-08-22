@@ -1,9 +1,9 @@
 each item in Data.frisbees
-  .col-12.row.p-0
+  .col-12.row.m-container.m-center.p-0
     if item.img_slug
       .m-container.m-center.mb-1.profile-pic
         img(src=`./assets/imgs/${item.img_slug}`)
-    .col-12.p-0
+    .col-sm-12.col-md-10.p-0
       section-heading
         #title(slot='title') #{item.title}
         .text-block(slot='textBlock') #{item.content_text}
@@ -14,7 +14,11 @@ each item in Data.frisbees
       if item.i_row
         include icon-row
   if item.carousel_slug
-    m-carousel.mt-1
+    .m-container.m-center
+      .col-sm-12.col-md-8
+        m-carousel.mt-1
   #ben
   if item.u_lists
-    include unordered-list
+    .m-container.m-center
+      .col-12
+        include unordered-list
