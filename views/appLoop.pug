@@ -3,7 +3,7 @@ each item in Data.frisbees
     if item.img_slug
       .m-container.m-center.mb-1.profile-pic
         img(src=`./assets/imgs/${item.img_slug}`)
-    .col-sm-12.col-md-10.p-0
+    .col-sm-12.col-md-10.col-4.p-0
       section-heading
         #title(slot='title') #{item.title}
         .text-block(slot='textBlock') #{item.content_text}
@@ -15,10 +15,9 @@ each item in Data.frisbees
         include icon-row
   if item.carousel_slug
     .m-container.m-center
-      .col-sm-12.col-md-8
+      .col-sm-12.col-md-8.col-4
         m-carousel.mt-1
   #ben
   if item.u_lists
-    .m-container.m-center
-      .col-12
-        include unordered-list
+    .col-12
+      include unordered-list

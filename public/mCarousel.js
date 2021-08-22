@@ -5,11 +5,10 @@ const Data = {
   id: 'm-carousel',
   html: `
     <div class="mb-1">
-      <button class="c-btn prev">prev</button>
+      <button class="c-btn prev"><</button>
       <div class="carousel">
       </div>
-      <button class="c-btn next">next</button>
-      <button class="c-btn pause">pause</button>
+      <button class="c-btn next">></button>
     </div>
     <link rel="stylesheet" href="./styles/style.css">
   `,
