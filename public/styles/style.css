@@ -66,11 +66,11 @@ body{
 }
 
 /* Text */
-button, #title {
+button, .title {
   font-weight: 800;
   font-size: 1.25em;
 }
-#title, .tab-title{
+.title, .tab-title{
   font-family: 'arial-black';
   text-transform: uppercase;
 }

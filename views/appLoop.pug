@@ -5,7 +5,7 @@ each item in Data.frisbees
   .col-12.row.m-container.m-center.p-0
     .col-sm-12.col-md-10.col-4.p-0
       section-heading
-        #title(slot='title') #{item.title}
+        .title(slot='title') #{item.title}
         .text-block(slot='textBlock') #{item.content_text}
       if item.btn
         .row.m-container.m-center
