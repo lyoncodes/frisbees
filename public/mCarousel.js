@@ -4,7 +4,7 @@ const Data = {
   name: 'm-carousel',
   id: 'm-carousel',
   html: `
-    <div class="m-container mb-1">
+    <div class="mb-1">
       <button class="c-btn prev">prev</button>
       <div class="carousel">
       </div>
