@@ -1,8 +1,8 @@
 each item in Data.frisbees
+  if item.img_slug
+    .m-container.m-center.mb-1.profile-pic
+      img(src=`./assets/imgs/${item.img_slug}`)
   .col-12.row.m-container.m-center.p-0
-    if item.img_slug
-      .m-container.m-center.mb-1.profile-pic
-        img(src=`./assets/imgs/${item.img_slug}`)
     .col-sm-12.col-md-10.col-4.p-0
       section-heading
         #title(slot='title') #{item.title}
