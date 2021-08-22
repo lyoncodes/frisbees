@@ -3,22 +3,18 @@ const Data = {
   name: 'nav-bar',
   id: 'nav-bar',
   html: `
-    <div id="nav" class="row m-container m-end navigation-menu">
+    <div id="nav" class="row m-container m-end navigation-menu sticky plane">
     </div>
     <link rel="stylesheet" href="./styles/style.css">
     `,
   type: 'template',
   navigation: [
     {
-      text: 'home',
+      text: 'Home',
       href: '#home'
     },
     {
-      text: 'services',
-      href: '#services'
-    },
-    {
-      text: 'listings',
+      text: 'Listings',
       href: 'https://www.greenerealty.com/agents/46583-ben-gaubert'
     },
     {
