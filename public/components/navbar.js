@@ -20,7 +20,11 @@ const Data = {
     {
       text: 'Meet Ben',
       href: '#ben'
+    },
+    {
+      text: 'Mobile',
+      href: ''
     }
-  ],
+  ]
 }
 BuildNav(Data)

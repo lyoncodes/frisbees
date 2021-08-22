@@ -1,8 +1,7 @@
-.m-container.m-center
-  each list in item.u_lists
-    .col-sm-12.col-md-8.col-4.mt-1.plane.sanded-edges
-      m-title.tab-title #{list.l_title}
-      ul
-        each listItem in list.l_items 
-          li
-            m-li #{listItem}
+each list in item.u_lists
+  .col-sm-12.col-md-8.col-4.mt-1.plane.sanded-edges
+    m-title.tab-title #{list.l_title}
+    ul
+      each listItem in list.l_items 
+        li
+          m-li #{listItem}

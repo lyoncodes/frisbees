@@ -2,9 +2,9 @@
 // defineNodes.js
 import { Carousel } from '../List.js'
 // =============================================
-function defineNodeAttribute (node, attr, src) {
+function defineNodeAttribute (node, attr, value) {
   let link = document.createAttribute(attr)
-  link.value = src
+  link.value = value
   node.setAttributeNode(link)
 }
 
@@ -78,11 +78,16 @@ export function BuildCarousel(obj) {
       
       carousel.populate(nlist)
 
-      this.shadowRoot.querySelector('.prev').addEventListener('click', () => carousel.prev());
-      this.shadowRoot.querySelector('.next').addEventListener('click', () => carousel.next());
-      this.shadowRoot.querySelector('.pause').addEventListener('click', () => clearInterval(cycle));
+      this.shadowRoot.querySelector('.prev').addEventListener('click', () => {
+        carousel.prev();
+        clearInterval(cycle);
+      });
+      this.shadowRoot.querySelector('.next').addEventListener('click', () => {
+        carousel.next()
+        clearInterval(cycle);
+      });
 
-      // let cycle = setInterval(() => { carousel.next(); }, 1000)
+      let cycle = setInterval(() => { carousel.next(); }, 6000)
 
     }
   }
@@ -111,6 +116,15 @@ export function BuildNav(obj){
         el.node.innerText = obj.navigation[idx].text
       })
       nlist.forEach(el => DOMref.appendChild(el.node))
+
+      let mobileNav = DOMref.querySelector(`#nav-link${nlist.length}`)
+      defineNodeAttribute(mobileNav, 'class', 'icon')
+
+      mobileNav.addEventListener('click', () => {
+        let nav = document.querySelector('#nav');
+        nav.className === 'navigation-menu' ? nav.className += ' responsive' : nav.className += 'navigation-menu'
+      })
+
     }
   }
 
