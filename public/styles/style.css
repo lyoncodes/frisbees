@@ -1,5 +1,5 @@
 * {
-  font-family: -agent-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'verdana', -agent-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   box-sizing: border-box;
 }
 [class*="col-"] {
@@ -30,6 +30,18 @@
 }
 
 /* Modifiers */
+.p-0 {
+  padding: 0;
+}
+.mb-1{
+  margin-bottom: 1em;
+}
+.mt-1{
+  margin-top: 1em;
+}
+.mt-3{
+  margin-top: 3em;
+}
 .m-center{
   justify-content: center;
 }
@@ -47,17 +59,42 @@
   top: 0;
   width: 100%;
 }
+.sanded-edges{
+  border-radius: 1em;
+}
 
 /* Text */
 button, #title {
   font-weight: 800;
+  font-size: 1.25em;
 }
-#title{
+#title, .tab-title{
+  font-family: 'arial-black';
   text-transform: uppercase;
+}
+.tab-title{
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.text-block, .carousel, li {
+  color: #39393a;
+  font-weight: 200;
+  font-size: .85rem;
+  line-height: 1.5em;
+}
+
+/* UL */
+li {
+  margin-bottom: 1em;
 }
 
 /* Nav Bar */
+.navigation-menu {
+  background-color: #fff;
+  z-index: 1;
+}
 .navigation-menu a{
+  color: #003b0d;
   overflow: hidden;
 }
 .navigation-menu a {
@@ -66,17 +103,14 @@ button, #title {
   padding: 1em;
 }
 .navigation-menu a:hover {
-  color: green;
   text-decoration: underline;
 }
 .navigation-menu a.active {
-  color: green;
   text-decoration: underline;
 }
 .navigation-menu .icon {
   display: none;
 }
-
 
 /* Links */
 .i-link img{
@@ -92,7 +126,7 @@ button, #title {
 
 /* Buttons */
 button {
-  background: #004f11;
+  background: #003b0d;
   border: 1px solid #003b0d;
   border-radius: 45px;
   box-shadow: 0 1.1875rem 1.75rem 0.3125rem rgb(64 64 64 / 9%);
@@ -103,6 +137,11 @@ button {
 .c-btn, button a {
   color: #fff;
   text-decoration: none;
+}
+
+/* layers */
+.plane{
+  box-shadow: 0 1.1875rem 1.75rem 0.3125rem rgb(64 64 64 / 9%);
 }
 
 @media screen and (max-width: 1244px) {
@@ -125,35 +164,12 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-  
-  .carousel > div > img {
-    height: 225px;
-    width: 100%;
+  body{
+    margin: 0;
   }
-
-  .c-btn{
-    position: absolute;
+  button, #title {
+    font-size: .75em;
   }
-  .pause{
-    width: auto;
-    left: 160px;
-    bottom: -125px;
-  }
-  .prev{
-    left: 10px;
-    bottom: -125px;
-    width: auto;
-  }
-  .next{
-    right: 10px;
-    bottom: -125px;
-    width: auto;
-  }
-
-  button {
-    width: 85%;
-  }
-
   .col-sm-1 {width: 8.33%;}
   .col-sm-2 {width: 16.66%;}
   .col-sm-3 {width: 25%;}
@@ -166,4 +182,48 @@ button {
   .col-sm-10 {width: 83.33%;}
   .col-sm-11 {width: 91.66%;}
   .col-sm-12 {width: 100%;}
+
+  .carousel > div > img {
+    height: 225px;
+    width: 100%;
+    z-index:-2;
+  }
+  .carousel > div > p {
+    margin-top: 25px;
+  }
+  
+  .c-btn{
+    position: absolute;
+    z-index: 0;
+  }
+  .prev, .next{
+    bottom: -75px;
+  }
+  .pause{
+    width: auto;
+    left: 160px;
+    bottom: 5px;
+  }
+  .prev{
+    left: 10px;
+    width: auto;
+  }
+  .next{
+    right: 10px;
+    width: auto;
+  }
+
+  button {
+    width: 85%;
+  }
+
+  .profile-pic::after{
+    content: '';
+    display: block;
+    box-shadow: 0 1.1875rem 1.75rem 0.3125rem rgb(64 64 64 / 9%);
+    height: 41%;
+    width: calc(100% - 10em);
+    max-width: 190px;
+    position: absolute;
+  }
 }
