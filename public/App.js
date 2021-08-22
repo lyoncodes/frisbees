@@ -7,8 +7,14 @@ const Data = {
     fTel: "(360)485-3711",
     fEmail: "bengaubert@greenerealty.com",
     fTrade: "© Made by Michael",
-    html_valid: "HTML Diagnostics",
-    CSS_valid: "CSS Check"
+    html_valid: {
+      text: "HTML Diagnostics",
+      url: "https://validator.w3.org/nu/?doc=https%3A%2F%2Fpreviousunwelcomesearchservice.lyoncodes.repl.co%2F"
+    },
+    CSS_valid: {
+      text: "CSS Check",
+      url: "https://jigsaw.w3.org/css-validator/validator?uri=https://previousunwelcomesearchservice.lyoncodes.repl.co/"
+    }
   },
   frisbees: [
     {
