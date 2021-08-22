@@ -100,8 +100,9 @@ button {
   padding: 0.25rem;
   width: 50%;
 }
-button a {
+.c-btn, button a {
   color: #fff;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 1244px) {
@@ -124,6 +125,35 @@ button a {
 }
 
 @media screen and (max-width: 600px) {
+  
+  .carousel > div > img {
+    height: 225px;
+    width: 100%;
+  }
+
+  .c-btn{
+    position: absolute;
+  }
+  .pause{
+    width: auto;
+    left: 160px;
+    bottom: -125px;
+  }
+  .prev{
+    left: 10px;
+    bottom: -125px;
+    width: auto;
+  }
+  .next{
+    right: 10px;
+    bottom: -125px;
+    width: auto;
+  }
+
+  button {
+    width: 85%;
+  }
+
   .col-sm-1 {width: 8.33%;}
   .col-sm-2 {width: 16.66%;}
   .col-sm-3 {width: 25%;}

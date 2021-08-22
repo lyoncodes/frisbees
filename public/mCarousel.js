@@ -4,11 +4,13 @@ const Data = {
   name: 'm-carousel',
   id: 'm-carousel',
   html: `
-    <button class="prev">prev</button>
-    <div class="carousel">
+    <div class="m-container">
+      <button class="c-btn prev">prev</button>
+      <div class="carousel">
+      </div>
+      <button class="c-btn next">next</button>
+      <button class="c-btn pause">pause</button>
     </div>
-    <button class="next">next</button>
-    <button class="pause">pause</button>
     <link rel="stylesheet" href="./styles/style.css">
   `,
   type: 'template',

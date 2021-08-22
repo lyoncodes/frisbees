@@ -1,4 +1,4 @@
-import { BuildNav } from './helpers/defineNode.js'
+import { BuildNav } from '../helpers/defineNode.js'
 const Data = {
   name: 'nav-bar',
   id: 'nav-bar',
