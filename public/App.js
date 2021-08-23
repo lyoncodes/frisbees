@@ -18,6 +18,10 @@ const Data = {
     CSS_valid: {
       text: "CSS Check",
       url: "https://jigsaw.w3.org/css-validator/validator?uri=https://previousunwelcomesearchservice.lyoncodes.repl.co/"
+    },
+    disclaimer: {
+      text: "disclaimer",
+      url: "https://docs.google.com/document/d/1C9ncBt9n0SlBUoNZJ_YMNIYP1WayiwMrGITuZ-leySo/edit?usp=sharing"
     }
   },
   frisbees: [
