@@ -1,0 +1,24 @@
+head
+  link(rel="stylesheet" href="./styles/style.css")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  script(src="https://www.google.com/recaptcha/api.js")
+  body
+    h1 Contact Ben
+    form(action="" method="post" id="contact-form")
+      div
+        label Name:
+      input(type="text" name="flname" id="flname")
+      
+      div
+        label Email:
+      input(type="text" name="email" id="email")
+      
+      div
+        label Message for Ben:
+      textarea(type="text" name="msg" id="msg")
+      
+      div(class="g-recaptcha" data-sitekey="6Lc7xxocAAAAAIO7FylJ-A6mnGDIy8gHUeP0i3xn")
+      
+      div
+        input(type="submit" name="Submit" value="Submit" id="submit")
+  script(src='../helpers/formSubmit.js')

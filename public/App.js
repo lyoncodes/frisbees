@@ -2,6 +2,10 @@ function App(req, res){
   res.render('index', { Data })
 }
 
+function Form(req, res){
+  res.render('form', { Data })
+}
+
 const Data = {
   footer: {
     fTel: "(360)485-3711",
@@ -22,7 +26,7 @@ const Data = {
       content_text: "Distinct natural beauty and a vibrant community make Olympia an amazing place to call home. No matter what your path or where you're from, I can help achieve your real estate goals with confidence and peace of mind. I'm proud to offer Thurston County brokerage services rooted in trust and transparency, putting my clients first from start to finish",
       btn: {
         btn_text: "Contact Me",
-        btn_href: "https://www.greenerealty.com/agents/46583-ben-gaubert"
+        btn_href: "/form"
       },
       i_row: [
         {
@@ -69,4 +73,7 @@ const Data = {
     }
   ]
 }
-module.exports = {App}
+module.exports = {
+  App,
+  Form
+}
