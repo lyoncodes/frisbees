@@ -31,7 +31,7 @@ app.post('/messages', (req, res) => {
   ){
     return res.json({"success": false, "msg":"Please select captcha"});
   }
-  const token = '6Lc7xxocAAAAADs1CuFdjDkVMfqniNd10WmkOElp'
+  const token = '6Ld19hocAAAAAGJkia7OyjYoEP8jssY_qQQjShlF'
 
   const verifyUrl = `https://google.com/recaptcha/api/siteverify?secret=${token}&response=${req.body.captcha}&remoteip=${req.connection.remoteAddress}`;
 
