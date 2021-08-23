@@ -7,7 +7,7 @@ function submitForm(e){
   const email = document.querySelector('#email').value;
   const captcha = document.querySelector('#g-recaptcha-response').value;
 
-  fetch('/messages', {
+  fetch('/form', {
     method: 'POST',
     headers: {
       'Accept': 'application/json, text/plain, */*',
@@ -17,6 +17,6 @@ function submitForm(e){
   })
   .then((res) => res.json())
   .then((data) => {
-    alert(data)
+    alert('hi ' + name)
   })
 }

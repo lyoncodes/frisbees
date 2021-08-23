@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.get('/', callback.App);
 app.get('/form', callback.Form);
 
-app.post('/messages', (req, res) => {
+app.post('/form', (req, res) => {
   if(
     req.body.captcha === undefined ||
     req.body.captcha === '' ||
