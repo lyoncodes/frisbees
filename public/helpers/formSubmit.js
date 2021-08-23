@@ -17,6 +17,6 @@ function submitForm(e){
   })
   .then((res) => res.json())
   .then((data) => {
-    alert(`${data}`)
+    alert(data)
   })
 }
