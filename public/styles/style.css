@@ -186,6 +186,9 @@ button {
   .col-md-12 {width: 100%;}
 }
 @media screen and (max-width: 600px) {
+  *{
+    overflow-x: hidden;
+  }
   .navigation-menu a:not(:last-child) {display: none;}
   .navigation-menu a.icon {
     float: right;
